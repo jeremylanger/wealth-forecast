@@ -1,0 +1,8 @@
+node_modules/
+build/
+.prettierrc.js
+.eslintrc.js
+env.d.ts
+vite.config.ts
+tailwind.config.js
+postcss.config.js
