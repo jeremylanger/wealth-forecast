@@ -1,4 +1,5 @@
 export * from './Account';
+export * from './Debt';
 export * from './EmergencyFund';
 export * from './Event';
 export * from './Investment';

@@ -18,15 +18,15 @@ const getAllPaymentsForMonth = (discretionary: number): void => {
   let cashLeftForMonth = discretionary + eventDiscretionary;
   let monthMode = MonthMode.base;
   while (monthMode !== MonthMode.done) {
-    for (let i = 0; i < accounts.length; i++) {
-      accounts[i].mode = monthMode;
-      accounts[i].month = currentMonth;
-      accounts[i].year = currentYear;
+    for (const account of accounts) {
+      account.mode = monthMode;
+      account.month = currentMonth;
+      account.year = currentYear;
 
-      const amount = accounts[i].calculatePaymentAmount(cashLeftForMonth);
-      const payment = accounts[i].getPayment(amount);
+      const amount = account.calculatePaymentAmount(cashLeftForMonth);
+      const payment = account.getPayment(amount);
 
-      accounts[i].paymentsBreakdown.push(payment);
+      account.paymentsBreakdown.push(payment);
       cashLeftForMonth -= payment.payment;
     }
 

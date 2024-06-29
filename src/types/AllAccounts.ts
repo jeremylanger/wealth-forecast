@@ -1,6 +1,3 @@
-import { Account } from '../classes/Account';
-import { EmergencyFund } from '../classes/EmergencyFund';
-import { Investment } from '../classes/Investment';
-import { Mortgage } from '../classes/Mortgage';
+import { Debt, EmergencyFund, Investment, Mortgage } from '../classes';
 
-export type AllAccounts = Account | Mortgage | EmergencyFund | Investment;
+export type AllAccounts = Mortgage | EmergencyFund | Investment | Debt;

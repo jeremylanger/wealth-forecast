@@ -46,8 +46,6 @@ export class Account implements TypeAccount {
 
   calculatePaymentAmount(cashLeft: number): number {
     if (this.mode === MonthMode.base) {
-      this.warnIfCannotMakePaymentOnDebt(cashLeft);
-
       if (this.type === AccountType.investment) {
         return 0;
       }
@@ -106,11 +104,5 @@ export class Account implements TypeAccount {
       payment,
       balance,
     };
-  };
-
-  warnIfCannotMakePaymentOnDebt = (payment: number): void => {
-    if (this.type === AccountType.debt && payment < this.monthlyPayment) {
-      console.warn("Ruh roh, scoobs, you don't have enough cash left in the month to make your base debt payment.");
-    }
   };
 }
