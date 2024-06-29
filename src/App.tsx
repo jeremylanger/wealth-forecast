@@ -9,8 +9,6 @@ import {
 } from './components';
 import { optimize } from './core';
 
-const debug = false;
-
 const optimizedAccounts = optimize();
 
 const App = () => (
@@ -32,7 +30,7 @@ const App = () => (
         <EventReport />
         <Sidebar />
         {optimizedAccounts.map((x) => (
-          <AccountReport key={x.name} debug={debug} {...x} />
+          <AccountReport key={x.name} {...x} />
         ))}
       </div>
     </div>

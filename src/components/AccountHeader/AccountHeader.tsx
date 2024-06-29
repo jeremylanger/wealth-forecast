@@ -1,13 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 import StickyEventListener from 'sticky-event-listener';
 
-import { Account, AccountSubtype } from '../types';
+import { Account, AccountSubtype } from '../../types';
+import { AccountHeaderDefault, AccountHeaderMortgage, AccountHeaderRealEstate } from '.';
 
-interface Props extends Account {
-  debug: boolean;
-}
-
-export const AccountHeader = (props: Props) => {
+export const AccountHeader = (props: Account) => {
   const ref = useRef(null);
   const [isStuck, setIsStuck] = useState(false);
 
@@ -23,6 +20,15 @@ export const AccountHeader = (props: Props) => {
     });
   }, [ref]);
 
+  const subtypeComponentMap = {
+    [AccountSubtype.emergencyFund]: AccountHeaderDefault,
+    [AccountSubtype.basic]: AccountHeaderDefault,
+    [AccountSubtype.mortgage]: AccountHeaderMortgage,
+    [AccountSubtype.realEstate]: AccountHeaderRealEstate,
+  };
+
+  const HeaderComponent = subtypeComponentMap[props.subtype];
+
   return (
     <div
       className={`sticker text-center font-gemunu-libre sticky top-0 z-20 backdrop-blur-lg ${
@@ -30,21 +36,7 @@ export const AccountHeader = (props: Props) => {
       }`}
       ref={ref}
     >
-      <div className="p-2 text-2xl">{props.name}</div>
-      <div className="p-2 text-sm">{(props.interestRate * 100).toFixed(2)}%</div>
-      <div className="flex p-2">
-        {props.debug && <div className="flex-auto p-2">Mode</div>}
-        <div className="flex-auto p-2">Interest</div>
-        {props.subtype === AccountSubtype.mortgage ? (
-          <>
-            <div className="flex-auto p-2">Principal</div>
-            <div className="flex-auto p-2">Escrow</div>
-          </>
-        ) : (
-          <div className="flex-auto p-2">Payment</div>
-        )}
-        <div className="flex-auto p-2">Balance</div>
-      </div>
+      <HeaderComponent {...props} />
     </div>
   );
 };

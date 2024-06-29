@@ -2,11 +2,7 @@ import { Account, Payment } from '../types';
 import { AccountHeader } from './AccountHeader';
 import { AccountPaymentRow } from './AccountPaymentRow';
 
-interface Props extends Account {
-  debug: boolean;
-}
-
-export const AccountReport = (props: Props) => {
+export const AccountReport = (props: Account) => {
   const getBreakdownPayments = (month: number, year: number): Array<Payment> =>
     props.paymentsBreakdown.filter((x) => x.month === month && x.year === year);
 
@@ -18,7 +14,6 @@ export const AccountReport = (props: Props) => {
           <AccountPaymentRow
             key={`account-${props.name}-${x.month}-${x.year}`}
             accountName={props.name}
-            debug={props.debug}
             {...x}
             subtype={props.subtype}
             breakdown={getBreakdownPayments(x.month, x.year)}
