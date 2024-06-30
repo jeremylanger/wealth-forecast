@@ -18,5 +18,6 @@ Type in the value of your savings and investment accounts, loans, and real estat
 
 So glad you made it this far and want to try it out! An example scenario is already loaded out of the gate. If you want to customize this for yourself, you'll need to make a few edits to the source code while the UI for data entry is still being built.
 
+1. Edit `src/constants.ts` to enter when you were born, life expectancy, retirement age, and monthly withdrawal rate during retirement.
 1. Edit `src/profile/accounts.ts` to put in all of your emergency funds, investment and savings accounts, credit cards, mortgages, and real estate.
 1. Edit `src/profile/events.ts` for any big life events you want to plan for like a promotion, a child's wedding, or paying for college.
