@@ -1,46 +1,22 @@
-# Getting Started with Create React App
+# Wealth Forecast
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Plan for retirement and big life events. Gain insights into how to build wealth faster with the money you already have.**
 
-## Available Scripts
+## Forecast your financial future
 
-In the project directory, you can run:
+Have you wondered how much money you need to retire comfortably? Or if you could get away with retiring a few years earlier? This dynamic financial modeling tool gives you an early look into what your future could look like.
 
-### `npm start`
+Type in the value of your savings and investment accounts, loans, and real estate. Change variables like retirement age, monthly withdrawal during retirement, life expectancy, life events, and interest rates and see instantly how your finances change.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## How is wealth optimization prioritized?
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Pay the minimum payments while you build up an emergency fund.
+1. Then roll that extra money into your highest interest rate account or debt.
+1. During retirement, withdraw from your lowest rate of return account.
 
-### `npm test`
+## How can I get started?
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+So glad you made it this far and want to try it out! An example scenario is already loaded out of the gate. If you want to customize this for yourself, you'll need to make a few edits to the source code while the UI for data entry is still being built.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Edit `src/profile/accounts.ts` to put in all of your emergency funds, investment and savings accounts, credit cards, mortgages, and real estate.
+1. Edit `src/profile/events.ts` for any big life events you want to plan for like a promotion, a child's wedding, or paying for college.
