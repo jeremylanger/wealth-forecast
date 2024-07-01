@@ -1,4 +1,4 @@
-import { Account, Payment } from '../types';
+import type { Account, Payment } from '../types';
 import { AccountHeader } from './AccountHeader';
 import { AccountPaymentRow } from './AccountPaymentRow';
 

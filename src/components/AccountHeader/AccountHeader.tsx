@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import StickyEventListener from 'sticky-event-listener';
 
-import { Account, AccountSubtype } from '../../types';
+import { type Account, AccountSubtype } from '../../types';
 import { AccountHeaderDefault, AccountHeaderMortgage, AccountHeaderRealEstate } from '.';
 
 export const AccountHeader = (props: Account) => {
@@ -18,7 +18,7 @@ export const AccountHeader = (props: Account) => {
         setIsStuck(event.detail.stuck);
       });
     });
-  }, [ref]);
+  }, []);
 
   const subtypeComponentMap = {
     [AccountSubtype.emergencyFund]: AccountHeaderDefault,

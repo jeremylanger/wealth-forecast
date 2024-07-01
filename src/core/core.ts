@@ -1,7 +1,7 @@
 import { Util } from '../classes';
 import { Constants } from '../constants';
 import { accounts, events } from '../profile';
-import { AccountSubtype, AccountType, AllAccounts, MonthMode } from '../types';
+import { AccountSubtype, AccountType, type AllAccounts, MonthMode } from '../types';
 
 const END_YEAR = Constants.BIRTH_YEAR + Constants.LIFE_EXPECTANCY;
 

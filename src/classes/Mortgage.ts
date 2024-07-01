@@ -1,4 +1,4 @@
-import { AccountSubtype, AccountType, Mortgage as TypeMortgage, Payment } from '../types';
+import type { AccountSubtype, AccountType, Mortgage as TypeMortgage, Payment } from '../types';
 import { Account } from './Account';
 
 export class Mortgage extends Account implements TypeMortgage {

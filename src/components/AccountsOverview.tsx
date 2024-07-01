@@ -1,5 +1,5 @@
 import { NumberFormat } from '../classes';
-import { AccountSubtype, AllAccounts, Mortgage } from '../types';
+import { AccountSubtype, type AllAccounts, type Mortgage } from '../types';
 
 export const AccountsOverview = ({ accounts }: { accounts: AllAccounts[] }) => (
   <div className="h-screen flex items-center justify-center">

@@ -1,5 +1,5 @@
 import { Constants } from '../constants';
-import { Account as TypeAccount, MonthMode } from '../types';
+import { type Account as TypeAccount, MonthMode } from '../types';
 import { Account } from './Account';
 import { Util } from './Util';
 

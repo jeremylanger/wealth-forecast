@@ -1,6 +1,6 @@
 import { NumberFormat, Util } from '../classes';
 import { Constants } from '../constants';
-import { AllAccounts } from '../types';
+import type { AllAccounts } from '../types';
 
 export const NetWorthOverview = ({ accounts }: { accounts: AllAccounts[] }) => {
   const netWorthAtRetirement = Util.calculateNetWorth(

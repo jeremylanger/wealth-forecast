@@ -1,5 +1,5 @@
 import { Debt, EmergencyFund, Investment, Mortgage, RealEstate } from '../classes';
-import { AccountSubtype, AccountType, AllAccounts } from '../types';
+import { AccountSubtype, AccountType, type AllAccounts } from '../types';
 
 const sortByPaymentOrder = (a: AllAccounts, b: AllAccounts): number => {
   const subtypePriority: Record<AccountSubtype, number> = {

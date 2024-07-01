@@ -1,5 +1,5 @@
 import { NumberFormat } from '../../classes';
-import { AccountSubtype, MonthModeHelper, Payment } from '../../types';
+import { AccountSubtype, MonthModeHelper, type Payment } from '../../types';
 import { AccountPaymentRowDefault, AccountPaymentRowMortgage, AccountPaymentRowRealEstate } from './';
 
 interface Props extends Payment {

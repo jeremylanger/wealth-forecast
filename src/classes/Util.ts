@@ -1,5 +1,5 @@
 import { Constants } from '../constants';
-import { AllAccounts } from '../types';
+import type { AllAccounts } from '../types';
 
 export class Util {
   static calculateNetWorth = (accounts: AllAccounts[], month: number, year: number): number =>

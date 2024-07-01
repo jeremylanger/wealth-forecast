@@ -1,4 +1,4 @@
-import { Account as TypeAccount, AccountSubtype, AccountType } from '../types';
+import type { Account as TypeAccount, AccountSubtype, AccountType } from '../types';
 import { Account } from './Account';
 
 export class RealEstate extends Account implements TypeAccount {

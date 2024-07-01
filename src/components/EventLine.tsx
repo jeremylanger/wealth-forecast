@@ -1,5 +1,4 @@
-import { Event } from '../classes/Event';
-import { NumberFormat } from '../classes/NumberFormat';
+import { type Event, NumberFormat } from '../classes';
 import { Constants } from '../constants';
 import { EventType } from '../types';
 

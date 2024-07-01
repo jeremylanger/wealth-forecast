@@ -1,5 +1,5 @@
 import { Constants } from '../constants';
-import { Account as TypeAccount, AccountSubtype, AccountType, MonthMode, Payment } from '../types';
+import { type Account as TypeAccount, AccountSubtype, AccountType, MonthMode, type Payment } from '../types';
 import { Util } from './Util';
 
 export class Account implements TypeAccount {

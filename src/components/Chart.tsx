@@ -13,7 +13,7 @@ import {
 import { useState } from 'react';
 import { Line } from 'react-chartjs-2';
 
-import { Account } from '../classes/Account';
+import type { Account } from '../classes/Account';
 import { Constants } from '../constants';
 import { AccountSubtype, AccountType } from '../types';
 

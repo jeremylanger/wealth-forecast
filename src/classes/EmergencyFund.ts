@@ -1,4 +1,4 @@
-import { AccountSubtype, AccountType, EmergencyFund as TypeEmergencyFund, MonthMode } from '../types';
+import { type AccountSubtype, type AccountType, type EmergencyFund as TypeEmergencyFund, MonthMode } from '../types';
 import { Account } from './Account';
 
 export class EmergencyFund extends Account implements TypeEmergencyFund {
