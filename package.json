@@ -25,8 +25,8 @@
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"lint": "eslint . --ext .ts,.tsx",
-		"prettier": "prettier --ignore-path .gitignore --write '**/*.+(js|jsx|ts|tsx)'",
-		"format": "eslint . --fix; npm run prettier"
+		"biome-format": "@biomejs/biome format --write ./src",
+		"format": "eslint . --fix; npm run biome-format"
 	},
 	"eslintConfig": {
 		"extends": [
@@ -53,14 +53,12 @@
 		"@vitejs/plugin-react": "^4.0.0",
 		"autoprefixer": "^10.4.12",
 		"eslint": "^8.40.0",
-		"eslint-config-prettier": "^8.8.0",
 		"eslint-plugin-function-name": "^2.0.1",
 		"eslint-plugin-import": "^2.27.5",
 		"eslint-plugin-jsx-a11y": "^6.7.1",
 		"eslint-plugin-react": "^7.32.2",
 		"eslint-plugin-simple-import-sort": "^10.0.0",
 		"postcss": "^8.4.16",
-		"prettier": "^2.7.1",
 		"tailwindcss": "^3.1.8",
 		"vite": "^4.3.7",
 		"vite-plugin-svgr": "^3.2.0",
