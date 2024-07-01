@@ -129,20 +129,20 @@ export const Chart = ({ accounts }: Props) => {
   // From StackOverflow: https://stackoverflow.com/a/74443361/1076872
   const plugin = {
     id: 'corsair',
-    afterInit: (chart, args, opts) => {
+    afterInit: (chart: any, args: any, opts: any) => {
       chart.corsair = {
         x: 0,
         y: 0,
       };
     },
-    afterEvent: (chart, args) => {
+    afterEvent: (chart: any, args: any) => {
       const { inChartArea } = args;
       const { type, x, y } = args.event;
 
       chart.corsair = { x, y, draw: inChartArea };
       chart.draw();
     },
-    beforeDatasetsDraw: (chart, args, opts) => {
+    beforeDatasetsDraw: (chart: any, args: any, opts: any) => {
       const { ctx } = chart;
       const { top, bottom, left, right } = chart.chartArea;
       const { x, y, draw } = chart.corsair;
