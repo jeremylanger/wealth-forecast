@@ -1,6 +1,6 @@
-import { type Event, NumberFormat } from '../classes';
-import { Constants } from '../constants';
-import { EventType } from '../types';
+import { type Event, NumberFormat } from "../classes";
+import { Constants } from "../constants";
+import { EventType } from "../types";
 
 const Dot = ({ offset }: { offset?: number }) => (
   <div
@@ -34,25 +34,25 @@ export const EventLine = (event: Event) => {
     >
       <div className="transition-all text-left pointer-events-none opacity-0 group-hover:opacity-100 fixed top-1/2 ml-8 font-gemunu-libre bg-stone-100 z-10 text-slate-900 py-1 rounded px-2">
         <div>{event.name}</div>
-        <div className={`${event.type === EventType.income ? 'text-teal-700' : 'text-red-500'} font-bold`}>
-          {event.type === EventType.income ? '+' : '-'}
+        <div className={`${event.type === EventType.income ? "text-teal-700" : "text-red-500"} font-bold`}>
+          {event.type === EventType.income ? "+" : "-"}
           {NumberFormat.toDollar(event.amount)}
-          {event.recurring && '/mo'}
+          {event.recurring && "/mo"}
         </div>
         <div>
           {event.startMonth}/{event.startYear}
           {event.endMonth && event.endYear && (
             <span>
-              {' '}
+              {" "}
               - {event.endMonth}/{event.endYear}
             </span>
           )}
         </div>
       </div>
       <div className="absolute font-gemunu-libre inline-block pointer-events-none -left-28 -top-0.5 w-24 text-right">
-        {event.type === EventType.income ? '+' : '-'}
+        {event.type === EventType.income ? "+" : "-"}
         {NumberFormat.toDollar(event.amount)}
-        {event.recurring && '/mo'}
+        {event.recurring && "/mo"}
       </div>
       <Dot />
       <Line offset={durationInMonths * pixelsPerMonth} />

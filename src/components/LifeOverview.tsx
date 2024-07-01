@@ -1,5 +1,5 @@
-import { NumberFormat } from '../classes';
-import { Constants } from '../constants';
+import { NumberFormat } from "../classes";
+import { Constants } from "../constants";
 
 const calculateYearDifference = (startMonth: number, startYear: number, endMonth: number, endYear: number): number => {
   let yearDifference = endYear - startYear;

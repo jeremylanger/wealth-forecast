@@ -1,5 +1,5 @@
-import { events } from '../profile';
-import { EventLine } from './EventLine';
+import { events } from "../profile";
+import { EventLine } from "./EventLine";
 
 export const EventReport = () => (
   <div className="inline-block align-top mr-4">

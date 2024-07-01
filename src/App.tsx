@@ -6,8 +6,8 @@ import {
   LifeOverview,
   NetWorthOverview,
   Sidebar,
-} from './components';
-import { optimize } from './core';
+} from "./components";
+import { optimize } from "./core";
 
 const optimizedAccounts = optimize();
 

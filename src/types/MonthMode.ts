@@ -11,19 +11,19 @@ export class MonthModeHelper {
   static getMonthModeName(mode?: MonthMode) {
     switch (mode) {
       case MonthMode.base:
-        return 'Base';
+        return "Base";
       case MonthMode.done:
-        return 'Done';
+        return "Done";
       case MonthMode.emergencyFund:
-        return 'Emergency Fund';
+        return "Emergency Fund";
       case MonthMode.events:
-        return 'Events';
+        return "Events";
       case MonthMode.highestRate:
-        return 'Highest Rate';
+        return "Highest Rate";
       case MonthMode.retirement:
-        return 'Retirement';
+        return "Retirement";
       default:
-        return '';
+        return "";
     }
   }
 }

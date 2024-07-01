@@ -1,6 +1,6 @@
-import type { AccountSubtype } from './AccountSubtype';
-import type { AccountType } from './AccountType';
-import type { Payment } from './Payment';
+import type { AccountSubtype } from "./AccountSubtype";
+import type { AccountType } from "./AccountType";
+import type { Payment } from "./Payment";
 
 export interface Account {
   balance: number;

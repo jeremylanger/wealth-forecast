@@ -1,6 +1,6 @@
-import { NumberFormat } from '../../classes';
-import { AccountSubtype, MonthModeHelper, type Payment } from '../../types';
-import { AccountPaymentRowDefault, AccountPaymentRowMortgage, AccountPaymentRowRealEstate } from './';
+import { NumberFormat } from "../../classes";
+import { AccountSubtype, MonthModeHelper, type Payment } from "../../types";
+import { AccountPaymentRowDefault, AccountPaymentRowMortgage, AccountPaymentRowRealEstate } from "./";
 
 interface Props extends Payment {
   accountName: string;

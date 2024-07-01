@@ -1,4 +1,4 @@
 export enum EventType {
-  income = 'Income',
-  payment = 'Payment',
+  income = "Income",
+  payment = "Payment",
 }

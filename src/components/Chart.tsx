@@ -9,13 +9,13 @@ import {
   PointElement,
   Title,
   Tooltip,
-} from 'chart.js';
-import { useState } from 'react';
-import { Line } from 'react-chartjs-2';
+} from "chart.js";
+import { useState } from "react";
+import { Line } from "react-chartjs-2";
 
-import type { Account } from '../classes/Account';
-import { Constants } from '../constants';
-import { AccountSubtype, AccountType } from '../types';
+import type { Account } from "../classes/Account";
+import { Constants } from "../constants";
+import { AccountSubtype, AccountType } from "../types";
 
 const END_YEAR = Constants.BIRTH_YEAR + Constants.LIFE_EXPECTANCY;
 
@@ -47,7 +47,7 @@ export const Chart = ({ accounts }: Props) => {
   const handleToggle = () => setIsLogarithmic((curr) => !curr);
 
   const generateLabels = (): string[] => {
-    if (!accounts.length) return [''];
+    if (!accounts.length) return [""];
 
     const labels = [];
     for (let i = Constants.START_YEAR; i <= END_YEAR; i++) {
@@ -96,39 +96,39 @@ export const Chart = ({ accounts }: Props) => {
     labels,
     datasets: [
       {
-        label: 'Net worth',
+        label: "Net worth",
         data: labels.map((_, i) => netWorthAmounts[i]),
-        borderColor: 'rgba(0, 255, 162, 0.5)',
-        backgroundColor: 'rgba(0, 255, 162, 0.5)',
+        borderColor: "rgba(0, 255, 162, 0.5)",
+        backgroundColor: "rgba(0, 255, 162, 0.5)",
       },
       {
-        label: 'Real estate',
+        label: "Real estate",
         data: labels.map((_, i) => realEstateAmounts[i]),
-        borderColor: 'rgba(255, 233, 0, 0.5)',
-        backgroundColor: 'rgba(255, 233, 0, 0.5)',
+        borderColor: "rgba(255, 233, 0, 0.5)",
+        backgroundColor: "rgba(255, 233, 0, 0.5)",
       },
       {
-        label: 'Investments',
+        label: "Investments",
         data: labels.map((_, i) => investmentAmounts[i]),
-        borderColor: 'rgba(255, 255, 255, 0.5)',
-        backgroundColor: 'rgba(255, 255, 255, 0.5)',
+        borderColor: "rgba(255, 255, 255, 0.5)",
+        backgroundColor: "rgba(255, 255, 255, 0.5)",
       },
       {
-        label: 'Debts',
+        label: "Debts",
         data: labels.map((_, i) => -debtAmounts[i]),
-        borderColor: 'rgba(255, 0, 40, 0.5)',
-        backgroundColor: 'rgba(255, 0, 40, 0.5)',
+        borderColor: "rgba(255, 0, 40, 0.5)",
+        backgroundColor: "rgba(255, 0, 40, 0.5)",
       },
     ],
   };
 
-  defaults.font.family = 'Gemunu Libre';
+  defaults.font.family = "Gemunu Libre";
   defaults.font.size = 16;
-  defaults.color = '#ffffff88';
+  defaults.color = "#ffffff88";
 
   // From StackOverflow: https://stackoverflow.com/a/74443361/1076872
   const plugin = {
-    id: 'corsair',
+    id: "corsair",
     afterInit: (chart: any, args: any, opts: any) => {
       chart.corsair = {
         x: 0,
@@ -165,29 +165,29 @@ export const Chart = ({ accounts }: Props) => {
   };
 
   const options: any = {
-    type: 'line',
+    type: "line",
     responsive: true,
     plugins: {
       legend: {
-        position: 'top',
+        position: "top",
       },
       title: {
         display: true,
-        text: 'Lifetime overview',
+        text: "Lifetime overview",
       },
       tooltip: {
-        mode: 'index',
+        mode: "index",
         intersect: false,
       },
       corsair: {
-        color: '#FFFFFF66',
+        color: "#FFFFFF66",
         width: 1,
         dash: [3, 3],
       },
     },
     scales: {
       y: {
-        type: isLogarithmic ? 'logarithmic' : 'linear',
+        type: isLogarithmic ? "logarithmic" : "linear",
       },
     },
   };

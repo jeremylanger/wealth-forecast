@@ -1,4 +1,4 @@
-import type { MonthMode } from './MonthMode';
+import type { MonthMode } from "./MonthMode";
 
 export interface Payment {
   mode?: MonthMode;

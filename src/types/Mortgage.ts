@@ -1,4 +1,4 @@
-import type { Account } from './Account';
+import type { Account } from "./Account";
 
 export interface Mortgage extends Account {
   homeownersInsurance?: number;

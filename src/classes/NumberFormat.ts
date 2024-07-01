@@ -1,5 +1,5 @@
 export class NumberFormat {
-  static internationalNumberFormat = new Intl.NumberFormat('en-US');
+  static internationalNumberFormat = new Intl.NumberFormat("en-US");
 
   static addCommas = (value: number): string => this.toDollar(value, false);
 

@@ -1,5 +1,5 @@
-import { type Account as TypeAccount, MonthMode } from '../types';
-import { Account } from './Account';
+import { type Account as TypeAccount, MonthMode } from "../types";
+import { Account } from "./Account";
 
 export class Debt extends Account implements TypeAccount {
   calculatePaymentAmount(cashLeft: number): number {

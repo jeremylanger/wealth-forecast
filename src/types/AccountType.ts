@@ -1,4 +1,4 @@
 export enum AccountType {
-  debt = 'debt',
-  investment = 'investment',
+  debt = "debt",
+  investment = "investment",
 }

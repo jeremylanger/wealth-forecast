@@ -1,22 +1,22 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./public/index.html', './src/**/*.{js,jsx,ts,tsx}'],
+  content: ["./public/index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       colors: {
         warm: {
-          DEFAULT: '#cbb95b',
+          DEFAULT: "#cbb95b",
         },
         teal: {
-          DEFAULT: '#00ffa2',
-          700: '#00a811',
+          DEFAULT: "#00ffa2",
+          700: "#00a811",
         },
-        'oxford-blue': {
-          DEFAULT: '#00273e',
+        "oxford-blue": {
+          DEFAULT: "#00273e",
         },
       },
       fontFamily: {
-        'gemunu-libre': ['Gemunu Libre', 'sans-serif'],
+        "gemunu-libre": ["Gemunu Libre", "sans-serif"],
         // 'inter-tight': ['Inter Tight', 'sans-serif'],
         // 'lora': ['Lora', 'serif'],
         // 'mukta': ['Mukta', 'sans-serif'],

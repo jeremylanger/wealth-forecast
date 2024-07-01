@@ -1,6 +1,6 @@
-import { Constants } from '../constants';
-import { type Account as TypeAccount, AccountSubtype, AccountType, MonthMode, type Payment } from '../types';
-import { Util } from './Util';
+import { Constants } from "../constants";
+import { type Account as TypeAccount, AccountSubtype, AccountType, MonthMode, type Payment } from "../types";
+import { Util } from "./Util";
 
 export class Account implements TypeAccount {
   balance: number;

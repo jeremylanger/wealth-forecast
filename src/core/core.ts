@@ -1,7 +1,7 @@
-import { Util } from '../classes';
-import { Constants } from '../constants';
-import { accounts, events } from '../profile';
-import { AccountSubtype, AccountType, type AllAccounts, MonthMode } from '../types';
+import { Util } from "../classes";
+import { Constants } from "../constants";
+import { accounts, events } from "../profile";
+import { AccountSubtype, AccountType, type AllAccounts, MonthMode } from "../types";
 
 const END_YEAR = Constants.BIRTH_YEAR + Constants.LIFE_EXPECTANCY;
 
@@ -64,7 +64,7 @@ const getAllPaymentsForMonthInRetirement = (): void => {
       if (accounts[i].type === AccountType.debt && amount !== 0) {
         const withdrawalAccountIndex = getRetirementWithdrawalAccountIndex();
         if (withdrawalAccountIndex === -1) {
-          throw new Error('Could not find retirement withdrawal account');
+          throw new Error("Could not find retirement withdrawal account");
         }
         const latestPaymentAmount = accounts[withdrawalAccountIndex].getLatestPaymentBreakdown()?.payment ?? 0;
         const withdrawal = accounts[withdrawalAccountIndex].getPayment(latestPaymentAmount - amount);

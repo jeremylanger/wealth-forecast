@@ -1,5 +1,5 @@
-import { NumberFormat } from '../../classes';
-import type { Payment } from '../../types';
+import { NumberFormat } from "../../classes";
+import type { Payment } from "../../types";
 
 export const AccountPaymentRowRealEstate = (props: Payment) => {
   const columns = 2;

@@ -1,7 +1,7 @@
-import { Constants } from '../constants';
-import { type Account as TypeAccount, MonthMode } from '../types';
-import { Account } from './Account';
-import { Util } from './Util';
+import { Constants } from "../constants";
+import { type Account as TypeAccount, MonthMode } from "../types";
+import { Account } from "./Account";
+import { Util } from "./Util";
 
 export class Investment extends Account implements TypeAccount {
   calculatePaymentAmount = (cashLeft: number): number => {

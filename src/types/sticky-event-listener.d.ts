@@ -1,1 +1,1 @@
-declare module 'sticky-event-listener';
+declare module "sticky-event-listener";

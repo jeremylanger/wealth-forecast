@@ -1,6 +1,6 @@
-import type { Account, Payment } from '../types';
-import { AccountHeader } from './AccountHeader';
-import { AccountPaymentRow } from './AccountPaymentRow';
+import type { Account, Payment } from "../types";
+import { AccountHeader } from "./AccountHeader";
+import { AccountPaymentRow } from "./AccountPaymentRow";
 
 export const AccountReport = (props: Account) => {
   const getBreakdownPayments = (month: number, year: number): Array<Payment> =>

@@ -1,5 +1,5 @@
-import { Constants } from '../constants';
-import Umbrella from '../images/umbrella-beach-solid.svg';
+import { Constants } from "../constants";
+import Umbrella from "../images/umbrella-beach-solid.svg";
 
 const END_YEAR = Constants.BIRTH_YEAR + Constants.LIFE_EXPECTANCY;
 
@@ -51,10 +51,10 @@ export const Sidebar = () => {
       <div className="fixed-width-font text-sm">
         {agesAndYears.map((x) => (
           <div key={`age-${x.month}-${x.year}`} className="h-8 pt-1.5 font-bold text-left">
-            <div className={`${x.age && 'rounded-full bg-stone-100 text-slate-900'} inline-block py-0.5 px-2 mr-2`}>
+            <div className={`${x.age && "rounded-full bg-stone-100 text-slate-900"} inline-block py-0.5 px-2 mr-2`}>
               {x.age}
             </div>
-            <div className={`${x.age && 'rounded-full bg-stone-100 text-slate-900'} inline-block py-0.5 px-2 mr-2`}>
+            <div className={`${x.age && "rounded-full bg-stone-100 text-slate-900"} inline-block py-0.5 px-2 mr-2`}>
               {x.age && x.year}
             </div>
             {x.age && x.age >= Constants.RETIREMENT_AGE && (
