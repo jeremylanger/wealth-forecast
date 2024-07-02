@@ -43,10 +43,12 @@ module.exports = {
         format: ["PascalCase"],
       },
     ],
+    "@typescript-eslint/no-explicit-any": "warn",
     "@typescript-eslint/no-floating-promises": "error",
     "@typescript-eslint/no-misused-promises": "error",
     "@typescript-eslint/no-unnecessary-condition": "error",
     "@typescript-eslint/no-unnecessary-type-assertion": "error",
+    "@typescript-eslint/no-unused-vars": "warn",
     // Note: you must disable the base rule as it can report incorrect errors
     "no-shadow": "off",
     "@typescript-eslint/no-shadow": "warn",
